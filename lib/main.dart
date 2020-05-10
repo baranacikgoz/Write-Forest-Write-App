@@ -1,7 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:marquee/marquee.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MyApp());
@@ -72,6 +72,12 @@ class _MyAppHomeState extends State<MyAppHome> {
         if (step == 1 && now - lastTypedAt > 4000) {
           step++;
         } else if (step != 1) {
+          http.post("https://write-forest-write-api.herokuapp.com/users/score",
+              body: {
+                'userName': userName,
+                'score': typedCharLength.toString()
+              });
+
           timer.cancel();
         }
       });
@@ -131,7 +137,8 @@ class _MyAppHomeState extends State<MyAppHome> {
             autofocus: true,
             onChanged: onType,
             decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: "Write and catch the text"),
+                border: OutlineInputBorder(),
+                labelText: "Write and catch the text"),
           ),
         ),
       ];
