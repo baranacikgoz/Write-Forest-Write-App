@@ -71,7 +71,9 @@ class _MyAppHomeState extends State<MyAppHome> {
       setState(() {
         if (step == 1 && now - lastTypedAt > 4000) {
           step++;
-        } else if (step != 1) {
+        } 
+    });
+    if (step != 1) {
           http.post("https://write-forest-write-api.herokuapp.com/users/score",
               body: {
                 'userName': userName,
@@ -81,7 +83,6 @@ class _MyAppHomeState extends State<MyAppHome> {
           timer.cancel();
         }
       });
-    });
   }
 
   void tryAgain() {
