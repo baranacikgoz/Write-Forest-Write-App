@@ -64,7 +64,7 @@ class _MyAppHomeState extends State<MyAppHome> {
       step++;
     });
 
-    var timer = Timer.periodic(new Duration(seconds: 1), (timer) {
+    var timer = Timer.periodic(new Duration(seconds: 1), (timer) async {
       int now = DateTime.now().millisecondsSinceEpoch;
 
       //Game over
@@ -74,7 +74,7 @@ class _MyAppHomeState extends State<MyAppHome> {
         } 
     });
     if (step != 1) {
-          http.post("https://write-forest-write-api.herokuapp.com/users/score",
+        await  http.post("https://write-forest-write-api.herokuapp.com/users/score",
               body: {
                 'userName': userName,
                 'score': typedCharLength.toString()
