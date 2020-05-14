@@ -1,16 +1,21 @@
-# write_forest_write
+# Write Fores Write 
 
-A new Flutter project.
+A simple mini-game that you have to write on time the text which is sliding.
 
-## Getting Started
+## Try it
 
-This project is a starting point for a Flutter application.
+You can try [Live Demo](https://baranacikgoz.github.io/Write-Forest-Write-App)
 
-A few resources to get you started if this is your first Flutter project:
+### Not my original idea
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+I've maden this while i was watching [Selman Kahya's](https://www.youtube.com/channel/UC9Z-Gc_BkYuW75jKcTJICJA) Youtube [live stream](https://www.youtube.com/watch?v=wsiArTIqetE&t=14195s), game/app is not my original idea, the original name is "Klavye Delikanlisi". It belongs to him. But i want to add a leaderboard later.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Built with
+
+* [Flutter](https://flutter.dev/) - A cross platform development
+* [Marquee](https://pub.dev/packages/marquee) - Slides the text
+
+## Author
+
+* [**Selman Kahya**](https://github.com/SelmanKahya)
+* [**Baran Açıkgöz**](https://baranacikgoz.github.io/)
